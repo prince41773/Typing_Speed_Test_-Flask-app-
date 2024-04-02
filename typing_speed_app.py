@@ -74,7 +74,6 @@ index_html = """
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Typing Speed Test</title>
     <style>
-        /* Your CSS styles here */
         body {
             background: linear-gradient(135deg, #FFD9FF 0%, #FFC9C9 50%, #AFC0FF 100%);
             font-family: Arial, sans-serif;
@@ -172,8 +171,7 @@ index_html = """
                 } else {
                     seconds--;
                 }
-                remainingTimeElement.textContent = minutes.toString().padStart(2, '0') +
-                                                    ":" + seconds.toString().padStart(2, '0');
+                remainingTimeElement.textContent = minutes.toString().padStart(2, '0') + ":" + seconds.toString().padStart(2, '0');
             }
         }
         var timerInterval = setInterval(updateTimer, 1000);
@@ -181,7 +179,6 @@ index_html = """
 </body>
 </html>
 """
-
 result_html = """
 <!DOCTYPE html>
 <html lang="en">
@@ -190,7 +187,6 @@ result_html = """
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Typing Speed Test Result</title>
     <style>
-        /* Your CSS styles here */
         body {
             background: linear-gradient(135deg, #FFD9FF 0%, #FFC9C9 50%, #AFC0FF 100%);
             font-family: Arial, sans-serif;
@@ -211,7 +207,6 @@ result_html = """
 </body>
 </html>
 """
-
 @app.route('/', methods=['GET', 'POST'])
 def index():
     if request.method == 'POST':
